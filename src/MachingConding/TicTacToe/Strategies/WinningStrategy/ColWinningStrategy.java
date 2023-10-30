@@ -18,13 +18,15 @@ public class ColWinningStrategy implements WinningStrategy{
         if(!count.containsKey(col)){
             count.put(col,new HashMap<>());
         }
-        Map<Symbol,Integer> colMap = new HashMap<>();
+        Map<Symbol,Integer> colMap = count.get(col);
 
         if(!colMap.containsKey(symbol)){
             colMap.put(symbol,0);
         }
+
         colMap.put(symbol,colMap.get(symbol)+1);
-        if(colMap.size() == board.getSize())
+
+        if(colMap.get(symbol).equals(board.getSize()))
             return true;
 
         return false;

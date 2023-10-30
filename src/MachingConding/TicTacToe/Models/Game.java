@@ -62,6 +62,7 @@ public class Game {
         if(checkWinner(actualMove)){
             setGameState(GameState.WIN);
             setWinner(currentPlayer);
+            return;
         }
 
         if (moves.size() == board.getSize() + board.getSize()){
