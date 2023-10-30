@@ -65,10 +65,10 @@ public class Game {
             return;
         }
 
-        if (moves.size() == board.getSize() + board.getSize()){
+        if (moves.size() == board.getSize() * board.getSize()){
             setGameState(GameState.DRAW);
-            System.out.println("Game has been Drawn");
-
+//            System.out.println("Game has been Drawn");
+            return;
         }
 
 
@@ -96,6 +96,27 @@ public class Game {
             return false;
 
         return true;
+    }
+
+    public void undo(){
+//        if(moves.size() == 0)
+//            return;
+
+        Move lastMove = moves.get(moves.size()-1);
+        moves.remove(moves.size()-1);
+
+        Cell cell = lastMove.getCell();
+        cell.setPlayer(null);
+        cell.setCellState(CellState.EMPTY);
+
+        for (WinningStrategy winningStrategy : winningStrategies){
+            winningStrategy.undo(board,lastMove);
+        }
+
+        nextPlayerTurnIndex -= 1;
+        nextPlayerTurnIndex = (nextPlayerTurnIndex + players.size()) % players.size();
+
+
     }
 
     public static Builder getBuilder(){

@@ -9,6 +9,18 @@ import java.util.Map;
 
 public class ColWinningStrategy implements WinningStrategy{
     Map<Integer,Map<Symbol,Integer>> count = new HashMap<>();
+
+    @Override
+    public void undo(Board board, Move move) {
+        int col = move.getCell().getCol();
+        Symbol symbol = move.getPlayer().getSymbol();
+
+        Map<Symbol,Integer> colMap = count.get(col);
+
+        colMap.put(symbol,colMap.get(symbol)-1);
+
+    }
+
     @Override
     public boolean checkWinner(Board board, Move move) {
 

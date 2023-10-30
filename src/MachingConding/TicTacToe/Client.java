@@ -12,10 +12,12 @@ import MachingConding.TicTacToe.Strategies.WinningStrategy.WinningStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Client {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws PlayerCountException, BotCountException, SymbolCountException {
         GameController gameController = new GameController();
+        Scanner scanner = new Scanner(System.in);
 
         try {
             int dimensions = 3;
@@ -31,6 +33,15 @@ public class Client {
 
             while (gameController.checkState(game).equals(GameState.IN_PROGRESS)){
                 gameController.displayboard(game);
+
+                if(game.getMoves().size() >= 1) {
+                    System.out.println("do you want to do Undo");
+                    String ans = scanner.next();
+                    if (ans.equalsIgnoreCase("y")) {
+                        gameController.undo(game);
+                        continue;
+                    }
+                }
                 gameController.makeMove(game);
             }
 
@@ -39,13 +50,15 @@ public class Client {
             }
 
             if (gameController.checkState(game).equals(GameState.WIN)){
-                System.out.println("Game has been won by " + gameController.getWinner(game).getName());
+                System.out.println("Game has been won by " + gameController.getWinner(game).getName()  +
+                        "\nTu haar gaya lodu " );
             }
 
         }catch (Exception e){
-            System.out.println("Kuch too kadbad Hai " + e);
+            throw e;
+//            System.out.println("Kuch too kadbad Hai " + e);
         }
-        System.out.println("lets play");
+        System.out.println("Game has been finished");
 
 
     }
