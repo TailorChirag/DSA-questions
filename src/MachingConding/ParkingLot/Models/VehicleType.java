@@ -1,4 +1,6 @@
 package MachingConding.ParkingLot.Models;
 
-public enum StatusOfBill {
+public enum VehicleType {
+    CAR,
+    BIKE
 }

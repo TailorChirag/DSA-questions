@@ -2,18 +2,17 @@ package MachingConding.ParkingLot.Models;
 
 public class Gate {
 
-//    private Id id
-    private  TypeOfGates typeOfGates;
+    private GateType gateType;
     private int Number;
     private Operator operator;
     private GateStatus gateStatus;
 
-    public TypeOfGates getTypeOfGates() {
-        return typeOfGates;
+    public GateType getGateType() {
+        return gateType;
     }
 
-    public void setTypeOfGates(TypeOfGates typeOfGates) {
-        this.typeOfGates = typeOfGates;
+    public void setGateType(GateType gateType) {
+        this.gateType = gateType;
     }
 
     public int getNumber() {

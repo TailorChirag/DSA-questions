@@ -1,53 +1,61 @@
 package MachingConding.ParkingLot.Models;
 
-import MachingConding.ParkingLot.Strategies.AllocationStrategy.AllocationStrategy;
-import MachingConding.ParkingLot.Strategies.PaymentStrategy.PaymentStrategy;
+import java.util.List;
 
 public class ParkingLot {
-//    private Id id;
-    private Floor floor;
-    private Gate gate;
-    private PaymentStrategy paymentStrategy;
-    private AllocationStrategy allocationStrategy;
-    private TypeOfVehicles typeOfVehicles;
 
-    public Floor getFloor() {
+    private List<ParkingFloor> floor;
+    private List<Gate> gate;
+    private List<VehicleType> vehicleTypes;
+    private ParkingLotStatus parkinglotStatus;
+    private SpotAssignmentStrategyType spotAssignmentStrategyType;
+    private FeesCalculatorStrategyType feesCalculatorStrategyType;
+
+    public List<ParkingFloor> getFloor() {
         return floor;
     }
 
-    public void setFloor(Floor floor) {
+    public void setFloor(List<ParkingFloor> floor) {
         this.floor = floor;
     }
 
-    public Gate getGate() {
+    public List<Gate> getGate() {
         return gate;
     }
 
-    public void setGate(Gate gate) {
+    public void setGate(List<Gate> gate) {
         this.gate = gate;
     }
 
-    public PaymentStrategy getPaymentStrategy() {
-        return paymentStrategy;
+    public List<VehicleType> getVehicleTypes() {
+        return vehicleTypes;
     }
 
-    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
-        this.paymentStrategy = paymentStrategy;
+    public void setVehicleTypes(List<VehicleType> vehicleTypes) {
+        this.vehicleTypes = vehicleTypes;
     }
 
-    public AllocationStrategy getAllocationStrategy() {
-        return allocationStrategy;
+    public ParkingLotStatus getParkinglotStatus() {
+        return parkinglotStatus;
     }
 
-    public void setAllocationStrategy(AllocationStrategy allocationStrategy) {
-        this.allocationStrategy = allocationStrategy;
+    public void setParkinglotStatus(ParkingLotStatus parkinglotStatus) {
+        this.parkinglotStatus = parkinglotStatus;
     }
 
-    public TypeOfVehicles getTypeOfVehicles() {
-        return typeOfVehicles;
+    public SpotAssignmentStrategyType getSpotAssignmentStrategyType() {
+        return spotAssignmentStrategyType;
     }
 
-    public void setTypeOfVehicles(TypeOfVehicles typeOfVehicles) {
-        this.typeOfVehicles = typeOfVehicles;
+    public void setSpotAssignmentStrategyType(SpotAssignmentStrategyType spotAssignmentStrategyType) {
+        this.spotAssignmentStrategyType = spotAssignmentStrategyType;
+    }
+
+    public FeesCalculatorStrategyType getFeesCalculatorStrategyType() {
+        return feesCalculatorStrategyType;
+    }
+
+    public void setFeesCalculatorStrategyType(FeesCalculatorStrategyType feesCalculatorStrategyType) {
+        this.feesCalculatorStrategyType = feesCalculatorStrategyType;
     }
 }
