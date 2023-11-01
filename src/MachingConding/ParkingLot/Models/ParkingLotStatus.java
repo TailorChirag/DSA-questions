@@ -1,4 +1,5 @@
 package MachingConding.ParkingLot.Models;
 
-public enum GateType {
+public interface ParkingLotStatus {
+
 }
