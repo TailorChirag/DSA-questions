@@ -1,4 +1,8 @@
 package MachingConding.ParkingLot.Models;
 
-public interface ModeOfPayment {
+public enum ModeOfPayment {
+
+    CASH,
+    ONLINE
+
 }
