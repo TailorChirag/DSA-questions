@@ -2,32 +2,35 @@ package MachingConding.ParkingLot.Models;
 
 public class Vehicle {
 
-//    private ID id;
-    private int number;
-    private TypeOfVehicles typeOfVehicles;
-    private String nameOfOwner;
+    private String number;
+    private VehicleType vehicleType;
+    private String ownerName;
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
-    public TypeOfVehicles getTypeOfVehicles() {
-        return typeOfVehicles;
+    public VehicleType getVehicleType() {
+        return vehicleType;
     }
 
-    public void setTypeOfVehicles(TypeOfVehicles typeOfVehicles) {
-        this.typeOfVehicles = typeOfVehicles;
+    public void setVehicleType(VehicleType vehicleType) {
+        this.vehicleType = vehicleType;
     }
 
-    public String getNameOfOwner() {
-        return nameOfOwner;
+    public String getOwnerName() {
+        return ownerName;
     }
 
-    public void setNameOfOwner(String nameOfOwner) {
-        this.nameOfOwner = nameOfOwner;
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
     }
 }
+
+
+
+

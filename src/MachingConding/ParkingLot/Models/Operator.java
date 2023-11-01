@@ -2,10 +2,9 @@ package MachingConding.ParkingLot.Models;
 
 public class Operator {
 
-//    private ID id;
     private String name;
     private Gate gate;
-    private String empolyeeId;
+    private int empId;
 
     public String getName() {
         return name;
@@ -23,11 +22,11 @@ public class Operator {
         this.gate = gate;
     }
 
-    public String getEmpolyeeId() {
-        return empolyeeId;
+    public int getEmpId() {
+        return empId;
     }
 
-    public void setEmpolyeeId(String empolyeeId) {
-        this.empolyeeId = empolyeeId;
+    public void setEmpId(int empId) {
+        this.empId = empId;
     }
 }

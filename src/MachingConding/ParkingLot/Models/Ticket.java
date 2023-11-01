@@ -1,23 +1,23 @@
 package MachingConding.ParkingLot.Models;
 
+import java.sql.Date;
 import java.sql.Time;
 
 public class Ticket {
 
-//    private ID id;
-    private int numberOfTickets;
+    private String number;
     private Vehicle vehicle;
-    private Time entryTime;
-    private ParkingSlot parkingSlot;
-    private Operator operator;
+    private Date entryTime;
+    private ParkingSpot parkingSpot;
+    private Operator generatedBy;
     private Gate gate;
 
-    public int getNumberOfTickets() {
-        return numberOfTickets;
+    public String getnumber() {
+        return number;
     }
 
-    public void setNumberOfTickets(int numberOfTickets) {
-        this.numberOfTickets = numberOfTickets;
+    public void setnumber(String number) {
+        this.number = number;
     }
 
     public Vehicle getVehicle() {
@@ -28,28 +28,28 @@ public class Ticket {
         this.vehicle = vehicle;
     }
 
-    public Time getEntryTime() {
+    public Date getEntryTime() {
         return entryTime;
     }
 
-    public void setEntryTime(Time entryTime) {
+    public void setEntryTime(Date entryTime) {
         this.entryTime = entryTime;
     }
 
-    public ParkingSlot getParkingSlot() {
-        return parkingSlot;
+    public ParkingSpot getparkingSpot() {
+        return parkingSpot;
     }
 
-    public void setParkingSlot(ParkingSlot parkingSlot) {
-        this.parkingSlot = parkingSlot;
+    public void setparkingSpot(ParkingSpot parkingSpot) {
+        this.parkingSpot = parkingSpot;
     }
 
     public Operator getOperator() {
-        return operator;
+        return generatedBy;
     }
 
-    public void setOperator(Operator operator) {
-        this.operator = operator;
+    public void setOperator(Operator generatedBy) {
+        this.generatedBy = generatedBy;
     }
 
     public Gate getGate() {

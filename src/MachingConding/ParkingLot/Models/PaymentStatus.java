@@ -1,5 +1,4 @@
 package MachingConding.ParkingLot.Models;
 
-public enum TypeOfGates {
-
+public enum PaymentStatus {
 }
