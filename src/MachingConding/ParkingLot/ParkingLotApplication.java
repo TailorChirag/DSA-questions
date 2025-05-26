@@ -1,6 +1,6 @@
 package MachingConding.ParkingLot;
 
-import MachingConding.ParkingLot.Controller.TicketcController;
+import MachingConding.ParkingLot.Controller.TicketController;
 import MachingConding.ParkingLot.Repositories.GateRepository;
 import MachingConding.ParkingLot.Repositories.ParkingLotRepository;
 import MachingConding.ParkingLot.Repositories.TicketRepository;
@@ -17,6 +17,6 @@ public class ParkingLotApplication {
         TicketService ticketService = new TicketService(gateRepository,
                 vehicleRepository, parkingLotRepository,ticketRepository);
 
-        TicketcController ticketcController = new TicketcController(ticketService);
+        TicketController ticketController = new TicketController(ticketService);
     }
 }

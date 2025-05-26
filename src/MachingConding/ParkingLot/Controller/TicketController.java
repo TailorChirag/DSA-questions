@@ -6,11 +6,11 @@ import MachingConding.ParkingLot.dto.IssueTicketRequest;
 import MachingConding.ParkingLot.dto.IssueTicketResponse;
 import MachingConding.ParkingLot.dto.ResponseStatus;
 
-public class TicketcController {
+public class TicketController {
 
     private TicketService ticketService;
 
-    public TicketcController(TicketService ticketService) {
+    public TicketController(TicketService ticketService) {
         this.ticketService = ticketService;
     }
 
